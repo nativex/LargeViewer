@@ -2,13 +2,13 @@
 	var app = angular.module('LFViewer', []);
 
 	app.controller('LargeFormatController', ['$scope', '$window', function($scope, $window) {
-		$scope.appId = "18575";
+		$scope.appId = "17414";
 		$scope.clientIP = "66.191.255.4";
 		$scope.udidType = 11;
 		$scope.udidValue = "abcdefghijkstephenisawesome";
 		$scope.deviceGen = "iPhone 5";
 		$scope.osVersion = "8.1";
-		$scope.placement = "Game Launch";
+		$scope.placement = "PortalTesting8";
 
 		$scope.submit = function() {
 			var session = {
@@ -40,6 +40,7 @@
 			    if (data && data.Session && data.Session.SessionIdAsString) {
 			    	var url = "http://appclick.co/Richmedia?SessionId=" + data.Session.SessionIdAsString + "&IsSKViewEnabled=0&placement=" + $scope.placement + "&placementtype=interstitial&IsMultiOffer=true";
 			    	console.log(url);
+			    	$window.location = url;
 			    }
 			  });
 		}
