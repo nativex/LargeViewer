@@ -27,8 +27,9 @@
 				IsOnWifi: true
 
 			}
+			console.log('bye');
 			$.ajax({
-			  url: "http://api.w3i.com/PublicServices/MobileTrackingApiRestV1.svc/Session/Get",
+			  url: "http://appclick.co/PublicServices/MobileTrackingApiRestV1.svc/CreateSessionV2",
 			  type: "POST",
 			  headers: {
 			  	Accept: "Application/json",
@@ -43,6 +44,7 @@
 			    	$window.location = url;
 			    }
 			  });
+			//$window.location = '/js/lfnonreward.html';
 		}
 	}]);
 
